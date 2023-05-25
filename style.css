@@ -1,0 +1,1060 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+}
+
+
+/* Desktop */
+/* Main container and title */
+
+@media (min-width: 992px) {
+        .container-main {
+        background-color: #C5E4E7;
+        padding: 163px 0px 239px 0px;
+    }
+
+    .title {
+        color: #3D6666;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 88px;
+        letter-spacing: 10px;
+        font-size: 28px;;
+    }
+
+
+
+    /* Calculator container */
+
+    .container-calculator {
+        width: 920px;
+        height: 481px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: 
+        "bill bill bill tip-amount displaying-tip"
+        "select-tip select-tip select-tip total displaying-total"
+        "select-tip select-tip select-tip total displaying-total"
+        "number-of-people number-of-people number-of-people reset-btn reset-btn";
+        background-color: #FFFFFF;
+        border-radius: 25px;
+        margin: auto;
+    }
+
+
+
+    /* Left side container */
+
+    .left-side-container {
+        width: 379px;
+        padding: 45px 24px 48px 45px;
+        display: grid;
+        grid-template-areas: 
+        "bill bill bill"
+        "select-tip select-tip select-tip"
+        "select-tip select-tip select-tip"
+        "number-of-people number-of-people number-of-people";
+    }
+
+    .bill {
+        grid-area: bill;
+        margin-bottom: 40px;
+    }
+
+    .bill p {
+        color: #5E7A7D;
+        padding-bottom: 6px;
+        font-size: 16px;
+        line-height: 23.7px;
+    }
+
+    .label-and-input {
+        width: 369px;
+        height: 48px;
+        background-color: #F3F9FA;
+        border-radius: 5px;
+    }
+
+    .label-and-input i {
+        position: absolute;
+        padding-top: 5px;
+    }
+
+
+    .bill label {
+        color: #9EBBBD;
+        font-size: 24px;
+        padding-left: 20px;
+        text-align: left;
+        line-height: 35.54px;
+    }
+
+    .bill input {
+        width: 369px;
+        height: 48px;
+        text-align: right;
+        font-size: 24px;
+        border: 2px solid #F3F9FA;
+        background-color: #F3F9FA;
+        outline: none;
+        line-height: 35.54px;
+        color: #00474B;
+        cursor: pointer;
+        border-radius: 5px;
+        padding-right: 5px;
+    }
+
+    .bill input:focus {
+        border: 2px solid #26C2AE;
+        border-radius: 5px;
+    }
+
+    .bill input::placeholder {
+        color: #9EBBBD;
+    }
+
+    .select-tip {
+        grid-area: select-tip;
+        margin-bottom: 40px;
+    }
+
+    .select-tip p {
+        color: #5E7A7D;
+        padding-bottom: 6px;
+        font-size: 16px;
+        line-height: 23.7px;
+    }
+
+    .select-tip button {
+        width: 117px;
+        height: 48px;
+        border-radius: 5px;
+        background-color: #00474B;
+        color: #FFFFFF;
+        font-size: 24px;
+        text-align: center;
+        line-height: 35.54px;
+        border: none;
+        margin-bottom: 16px;
+        cursor: pointer;
+    }
+
+    .select-tip button:nth-child(2), .select-tip button:nth-child(3), .select-tip button:nth-child(5), .select-tip button:nth-child(6) {
+        margin-right: 14px;
+    }
+
+    /* .select-tip button:active, button:focus {
+        background-color: #26C2AE;
+        color: #00474B;
+    } */
+
+    .select-tip input {
+        width: 103px;
+        height: 46px;
+        border-radius: 5px;
+        background-color: #F3F9FA;
+        border: 2px solid #F3F9FA;
+        text-align: right;
+        font-size: 24px;
+        outline: none;
+        line-height: 35.54px;
+        color: #00474B;
+        cursor: pointer;
+        padding-right: 10px;
+    }
+
+    .select-tip input:focus {
+        border: 2px solid #26C2AE;
+        border-radius: 5px;
+    }
+
+    .select-tip input::placeholder {
+        color: #547878;
+        font-size: 24px;
+        line-height: 35.54px;
+        text-align: center;
+        padding: 6px 15px 6px 14px;
+    }
+
+    .number-of-people {
+        grid-area: number-of-people;
+    }
+
+    .number-of-people p {
+        color: #5E7A7D;
+        padding-bottom: 6px;
+        font-size: 16px;
+        line-height: 23.7px;
+        width: 369px;
+    }
+
+    .input-error-message {
+        text-align: right;
+        color: red;
+        padding-left: 85px;
+    }
+
+    .number-of-people input {
+        width: 369px;
+        height: 48px;
+        text-align: right;
+        font-size: 24px;
+        border: 2px solid #F3F9FA;
+        background-color: #F3F9FA;
+        outline: none;
+        line-height: 35.54px;
+        color: #00474B;
+        cursor: pointer;
+        border-radius: 5px;
+        padding-right: 5px;
+    }
+
+    .number-of-people input:focus {
+        border: 2px solid #26C2AE;
+        border-radius: 5px;
+    }
+
+    .number-of-people input::placeholder {
+        color: #9EBBBD;
+    }
+
+    .fa {
+        color: #9EBBBD;
+        font-size: 20px;
+        padding-left: 20px;
+        text-align: left;
+        line-height: 35.54px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    input[type="number"] {
+    -moz-appearance: textfield;
+    }
+
+
+
+    /* Right side container */ 
+
+    .right-side-container {
+        width: 413px;
+        height: 417px;
+        margin: 32px 32px 32px 24px;
+        background-color: #00474B;
+        border-radius: 25px;
+        display: grid;
+        grid-template-areas: 
+        "tip-amount displaying-tip"
+        "total displaying-total"
+        "reset-btn reset-btn";
+    }
+
+    .tip-amount {
+        grid-area: tip-amount;
+        padding: 52px 0px 0px 40px;
+    }
+
+    .tip-amount p {
+        color: #FFFFFF;
+        font-size: 16px;
+        line-height: 23.7px;
+    }
+
+    .tip-amount p span{
+        color: #7F9D9F;
+        font-size: 13px;
+        line-height: 19.25px;
+    }
+
+    .displaying-tip {
+        grid-area: displaying-tip;
+        padding: 40px 40px 0px 0px;
+    }
+
+    .displaying-tip p {
+        color: #26C2AE;
+        font-size: 48px;
+        line-height: 71.09px;
+        letter-spacing: -1;
+        text-align: right;
+    }
+
+
+    .total {
+        grid-area: total;
+        padding: 0px 0px 125px 40px;
+    }
+
+    .total p {
+        color: #FFFFFF;
+        font-size: 16px;
+        line-height: 23.7px;
+        padding-top: 9px;
+    }
+
+    .total p span {
+        color: #7F9D9F;
+        font-size: 13px;
+        line-height: 19.25px;
+    }
+
+    .displaying-total {
+        grid-area: displaying-total;
+        padding-right: 40px;
+    }
+
+    .displaying-total p {
+        color: #26C2AE;
+        color: #26C2AE;
+        font-size: 48px;
+        line-height: 71.09px;
+        letter-spacing: -1;
+        text-align: right;
+    }
+
+    .reset-btn {
+        grid-area: reset-btn;
+        margin: auto;
+    }
+
+    .reset-btn button {
+        width: 333px;
+        height: 48px;
+        border: none;
+        border-radius: 5px;
+        background-color: #26C2AE;
+        color: #00474B;
+        font-size: 20px;
+        text-align: center;
+        line-height: 29.62px;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+        cursor: pointer;
+    }
+
+    .reset-btn button:active {
+        background-color:#9FE8DF;
+    }
+
+    button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+
+
+/* Tablet */
+/* Main container and title */
+
+@media (max-width: 991px) {
+    .container-main {
+    background-color: #C5E4E7;
+    padding: 80px 0px 180px 0px;
+}
+
+    .title {
+        color: #3D6666;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 50px;
+        letter-spacing: 10px;
+        font-size: 28px;;
+    }
+
+
+
+    /* Calculator container */
+
+    .container-calculator {
+        width: 780px;
+        height: 481px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: 
+        "bill bill bill tip-amount displaying-tip"
+        "select-tip select-tip select-tip total displaying-total"
+        "select-tip select-tip select-tip total displaying-total"
+        "number-of-people number-of-people number-of-people reset-btn reset-btn";
+        background-color: #FFFFFF;
+        border-radius: 25px;
+        margin: auto;
+    }
+
+
+
+    /* Left side container */
+
+    .left-side-container {
+        width: 300px;
+        padding: 45px 24px 48px 45px;
+        display: grid;
+        grid-template-areas: 
+        "bill bill bill"
+        "select-tip select-tip select-tip"
+        "select-tip select-tip select-tip"
+        "number-of-people number-of-people number-of-people";
+    }
+
+    .bill {
+        grid-area: bill;
+        margin-bottom: 40px;
+    }
+
+    .bill p {
+        color: #5E7A7D;
+        padding-bottom: 6px;
+        font-size: 16px;
+        line-height: 23.7px;
+    }
+
+    .label-and-input {
+        width: 285px;
+        height: 48px;
+        background-color: #F3F9FA;
+        border-radius: 5px;
+        display: flex;
+    }
+
+    .label-and-input i {
+        position: absolute;
+        padding-top: 5px;
+    }
+
+    .label {
+        display: flex;
+    }
+
+    .bill label {
+        color: #9EBBBD;
+        font-size: 24px;
+        padding-left: 20px;
+        text-align: left;
+        line-height: 35.54px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 5px;
+    }
+
+    .bill input {
+        width: 285px;
+        text-align: right;
+        font-size: 24px;
+        border: 2px solid #F3F9FA;
+        background-color: #F3F9FA;
+        outline: none;
+        line-height: 35.54px;
+        color: #00474B;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        padding-right: 5px;
+        border-radius: 5px;
+    }
+
+    .bill input:focus {
+        border: 2px solid #26C2AE;
+        border-radius: 5px;
+    }
+
+    .bill input::placeholder {
+        color: #9EBBBD;
+    }
+
+    .select-tip {
+        grid-area: select-tip;
+        margin-bottom: 40px;
+    }
+
+    .select-tip p {
+        color: #5E7A7D;
+        padding-bottom: 6px;
+        font-size: 16px;
+        line-height: 23.7px;
+    }
+
+    .select-tip button {
+        width: 90px;
+        height: 48px;
+        border-radius: 5px;
+        background-color: #00474B;
+        color: #FFFFFF;
+        font-size: 24px;
+        text-align: center;
+        line-height: 35.54px;
+        border: none;
+        margin-bottom: 16px;
+        cursor: pointer;
+    }
+
+    .select-tip button:nth-child(2), .select-tip button:nth-child(3), .select-tip button:nth-child(5), .select-tip button:nth-child(6) {
+        margin-right: 10px;
+    }
+
+    /* .select-tip button:focus{
+        background-color: #26C2AE;
+        color: #00474B;
+    } */
+
+    .select-tip input {
+        width: 84px;
+        height: 46px;
+        border-radius: 5px;
+        background-color: #F3F9FA;
+        border: 2px solid #F3F9FA;
+        text-align: right;
+        outline: none;
+        line-height: 35.54px;
+        color: #00474B;
+        cursor: pointer;
+        padding-right: 5px;
+        font-size: 24px;
+    }
+
+    .select-tip input:focus {
+        border: 2px solid #26C2AE;
+        border-radius: 5px;
+    }
+
+    .select-tip input::placeholder {
+        color: #547878;
+        font-size: 20px;
+        line-height: 35.54px;
+        text-align: center;
+    }
+
+    .number-of-people {
+        grid-area: number-of-people;
+    }
+
+    .number-of-people p {
+        color: #5E7A7D;
+        padding-bottom: 6px;
+        font-size: 16px;
+        line-height: 23.7px;
+    }
+
+    .input-error-message {
+        text-align: right;
+        color: red;
+        padding-left: 5px;
+    }
+
+    .number-of-people input {
+        width: 285px;
+        height: 48px;
+        text-align: right;
+        font-size: 24px;
+        border: 2px solid #F3F9FA;
+        background-color: #F3F9FA;
+        outline: none;
+        line-height: 35.54px;
+        color: #00474B;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        padding-right: 5px;
+        border-radius: 5px;
+    }
+
+    .number-of-people input:focus {
+        border: 2px solid #26C2AE;
+        border-radius: 5px;
+    }
+
+    .number-of-people input::placeholder {
+        color: #9EBBBD;
+    }
+
+    .fa {
+        color: #9EBBBD;
+        font-size: 15px;
+        padding-left: 20px;
+        text-align: left;
+        line-height: 35.54px;
+        display: flex;
+        flex-direction: row;
+        padding-top: 4px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    input[type="number"] {
+    -moz-appearance: textfield;
+    }
+
+
+
+    /* Right side container */ 
+
+    .right-side-container {
+        width: 334px;
+        height: 417px;
+        margin: 32px 32px 32px 24px;
+        background-color: #00474B;
+        border-radius: 25px;
+        display: grid;
+        grid-template-areas: 
+        "tip-amount displaying-tip"
+        "total displaying-total"
+        "reset-btn reset-btn";
+    }
+
+    .tip-amount {
+        grid-area: tip-amount;
+        padding: 52px 0px 0px 40px;
+    }
+
+    .tip-amount p {
+        color: #FFFFFF;
+        font-size: 16px;
+        line-height: 23.7px;
+    }
+
+    .tip-amount p span{
+        color: #7F9D9F;
+        font-size: 13px;
+        line-height: 19.25px;
+    }
+
+    .displaying-tip {
+        grid-area: displaying-tip;
+        padding: 40px 40px 0px 0px;
+    }
+
+    .displaying-tip p {
+        color: #26C2AE;
+        font-size: 48px;
+        line-height: 71.09px;
+        letter-spacing: -1;
+        text-align: right;
+    }
+
+
+    .total {
+        grid-area: total;
+        padding: 0px 0px 125px 40px;
+    }
+
+    .total p {
+        color: #FFFFFF;
+        font-size: 16px;
+        line-height: 23.7px;
+        padding-top: 9px;
+    }
+
+    .total p span {
+        color: #7F9D9F;
+        font-size: 13px;
+        line-height: 19.25px;
+    }
+
+    .displaying-total {
+        grid-area: displaying-total;
+        padding-right: 40px;
+    }
+
+    .displaying-total p {
+        color: #26C2AE;
+        color: #26C2AE;
+        font-size: 48px;
+        line-height: 71.09px;
+        letter-spacing: -1;
+        text-align: right;
+    }
+
+    .reset-btn {
+        grid-area: reset-btn;
+        margin: auto;
+    }
+
+    .reset-btn button {
+        width: 280px;
+        height: 48px;
+        border: none;
+        border-radius: 5px;
+        background-color: #26C2AE;
+        color: #00474B;
+        font-size: 20px;
+        text-align: center;
+        line-height: 29.62px;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+        cursor: pointer;
+    }
+
+    .reset-btn button:active {
+        background-color:#9FE8DF;
+    }
+
+    button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+
+/* Mobile */
+/* Main container and title */
+
+@media (max-width: 700px) {
+    .container-main {
+    background-color: #C5E4E7;
+    padding: 50px 0px 0px 0px;
+}
+
+    .title {
+        color: #3D6666;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 40px;
+        letter-spacing: 10px;
+        font-size: 24px;
+    }
+
+
+
+    /* Calculator container */
+
+    .container-calculator {
+        width: 375px;
+        height: 789px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "left-side-container"
+        "right-side-container";
+        background-color: #FFFFFF;
+        border-radius: 25px;
+        margin: auto;
+    }
+
+
+
+    /* Left side container */
+
+    .left-side-container {
+        width: 375px;
+        padding: 32px;
+        display: grid;
+        grid-template-areas: 
+        "bill bill"
+        "select-tip select-tip"
+        "select-tip select-tip"
+        "select-tip select-tip"
+        "number-of-people number-of-people";
+        grid-area: left-side-container;
+    }
+
+    .bill {
+        grid-area: bill;
+        margin-bottom: 32px;
+    }
+
+    .bill p {
+        color: #5E7A7D;
+        padding-bottom: 6px;
+        font-size: 16px;
+        line-height: 23.7px;
+    }
+
+    .label-and-input {
+        /* width: 61px; */
+        width: 300px;
+        height: 48px;
+        background-color: #F3F9FA;
+        border-radius: 5px;
+        display: flex;
+    }
+
+    .label-and-input i {
+        position: absolute;
+        padding-top: 5px;
+    }
+
+    .bill label {
+        color: #9EBBBD;
+        font-size: 24px;
+        padding-left: 10px;
+        text-align: left;
+        line-height: 35.54px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 5px;
+    }
+
+    .bill input {
+        width: 300px;
+        text-align: right;
+        font-size: 24px;
+        border: 2px solid #F3F9FA;
+        background-color: #F3F9FA;
+        outline: none;
+        line-height: 35.54px;
+        color: #00474B;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        padding-right: 10px;
+        border-radius: 5px;
+    }
+
+    .bill input:focus {
+        border: 2px solid #26C2AE;
+        border-radius: 5px;
+    }
+
+    .bill input::placeholder {
+        color: #9EBBBD;
+    }
+
+    .select-tip {
+        grid-area: select-tip;
+        margin-bottom: 32px;
+    }
+
+    .select-tip p {
+        color: #5E7A7D;
+        padding-bottom: 16px;
+        font-size: 16px;
+        line-height: 23.7px;
+    }
+
+    .select-tip button {
+        width: 146.63px;
+        height: 48px;
+        border-radius: 5px;
+        background-color: #00474B;
+        color: #FFFFFF;
+        font-size: 24px;
+        text-align: center;
+        line-height: 35.54px;
+        border: none;
+        margin-bottom: 16px;
+        cursor: pointer;
+    }
+
+    .select-tip button:nth-child(2), .select-tip button:nth-child(4), .select-tip button:nth-child(6) {
+        margin-right: 16px;
+    }
+
+    /* .select-tip button:focus {
+        background-color: #26C2AE;
+        color: #00474B;
+    } */
+
+    .select-tip input {
+        width: 135px;
+        height: 46px;
+        border-radius: 5px;
+        background-color: #F3F9FA;
+        border: 2px solid #F3F9FA;
+        text-align: right;
+        outline: none;
+        line-height: 35.54px;
+        color: #00474B;
+        cursor: pointer;
+        padding-right: 10px;
+    }
+
+    .select-tip input:focus {
+        border: 2px solid #26C2AE;
+        border-radius: 5px;
+    }
+
+    .select-tip input::placeholder {
+        color: #547878;
+        font-size: 24px;
+        line-height: 35.54px;
+        text-align: center;
+        /* padding: 6px 15px 6px 14px; */
+    }
+
+    .number-of-people {
+        grid-area: number-of-people;
+    }
+
+    .number-of-people p {
+        color: #5E7A7D;
+        padding-bottom: 6px;
+        font-size: 16px;
+        line-height: 23.7px;
+    }
+
+    .input-error-message {
+        text-align: right;
+        color: red;
+        padding-left: 20px;
+    }
+
+
+    .number-of-people label {
+        display: flex;
+    }
+
+    .number-of-people input {
+        width: 300px;
+        height: 48px;
+        text-align: right;
+        font-size: 24px;
+        border: 2px solid #F3F9FA;
+        background-color: #F3F9FA;
+        outline: none;
+        line-height: 35.54px;
+        color: #00474B;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        padding-right: 10px;
+        border-radius: 5px;
+    }
+
+    .number-of-people input:focus {
+        border: 2px solid #26C2AE;
+        border-radius: 5px;
+    }
+
+    .number-of-people input::placeholder {
+        color: #9EBBBD;
+    }
+
+    .fa {
+        color: #9EBBBD;
+        font-size: 15px;
+        padding-left: 10px;
+        text-align: left;
+        line-height: 35.54px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    input[type="number"] {
+    -moz-appearance: textfield;
+    }
+
+
+
+    /* Right side container */ 
+
+    .right-side-container {
+        width: 327px;
+        height: 257px;
+        margin: 0px 24px;
+        background-color: #00474B;
+        border-radius: 25px;
+        display: grid;
+        grid-area: right-side-container;
+        grid-template-areas: 
+        "tip-amount displaying-tip"
+        "total displaying-total"
+        "reset-btn reset-btn";
+    }
+
+    .tip-amount {
+        grid-area: tip-amount;
+        padding: 39px 0px 0px 24px;
+    }
+
+    .tip-amount p {
+        color: #FFFFFF;
+        font-size: 16px;
+        line-height: 23.7px;
+    }
+
+    .tip-amount p span{
+        color: #7F9D9F;
+        font-size: 13px;
+        line-height: 19.25px;
+    }
+
+    .displaying-tip {
+        grid-area: displaying-tip;
+        padding: 37px 22px 0px 0px;
+    }
+
+    .displaying-tip p {
+        color: #26C2AE;
+        font-size: 32px;
+        line-height: 47.39px;
+        letter-spacing: -0.67px;
+        text-align: right;
+    }
+
+
+    .total {
+        grid-area: total;
+        padding: 20px 0px 32px 24px;
+    }
+
+    .total p {
+        color: #FFFFFF;
+        font-size: 16px;
+        line-height: 23.7px;
+        padding-top: 9px;
+    }
+
+    .total p span {
+        color: #7F9D9F;
+        font-size: 13px;
+        line-height: 19.25px;
+    }
+
+    .displaying-total {
+        grid-area: displaying-total;
+        padding-right: 22px;
+    }
+
+    .displaying-total p {
+        color: #26C2AE;
+        color: #26C2AE;
+        font-size: 32px;
+        line-height: 47.39px;
+        letter-spacing: -0.67px;
+        text-align: right;
+    }
+
+    .reset-btn {
+        grid-area: reset-btn;
+        margin: auto;
+    }
+
+    .reset-btn button {
+        width: 281px;
+        height: 48px;
+        border: none;
+        border-radius: 5px;
+        background-color: #26C2AE;
+        color: #00474B;
+        font-size: 20px;
+        text-align: center;
+        line-height: 29.62px;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        cursor: pointer;
+    }
+
+    .reset-btn button:active {
+        background-color:#9FE8DF;
+    }
+
+    button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
