@@ -144,11 +144,6 @@
         margin-right: 14px;
     }
 
-    /* .select-tip button:active, button:focus {
-        background-color: #26C2AE;
-        color: #00474B;
-    } */
-
     .select-tip input {
         width: 103px;
         height: 46px;
@@ -496,11 +491,6 @@
         margin-right: 10px;
     }
 
-    /* .select-tip button:focus{
-        background-color: #26C2AE;
-        color: #00474B;
-    } */
-
     .select-tip input {
         width: 84px;
         height: 46px;
@@ -768,7 +758,6 @@
     }
 
     .label-and-input {
-        /* width: 61px; */
         width: 300px;
         height: 48px;
         background-color: #F3F9FA;
@@ -847,11 +836,6 @@
         margin-right: 16px;
     }
 
-    /* .select-tip button:focus {
-        background-color: #26C2AE;
-        color: #00474B;
-    } */
-
     .select-tip input {
         width: 135px;
         height: 46px;
@@ -876,7 +860,6 @@
         font-size: 24px;
         line-height: 35.54px;
         text-align: center;
-        /* padding: 6px 15px 6px 14px; */
     }
 
     .number-of-people {

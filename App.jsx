@@ -35,8 +35,8 @@ export default function App() {
         setButtonValue((prevButtonValue) => ({
           ...prevButtonValue,
           [event.target.name]: parseInt(event.target.value),
-        }));
-      }
+        }))
+    }
 
 
     function resetForm() {
@@ -45,8 +45,8 @@ export default function App() {
             customTip: "",
             numberOfPeople: "",
             errorMessage: ""
-        });
-        setActiveButton(null);
+        })
+        setActiveButton(null)
     } 
 
     const disableResetButton =
@@ -55,18 +55,18 @@ export default function App() {
         inputData.numberOfPeople === "" &&
         activeButton === null
 
-    function handleChange(event) {
-        const { name, value } = event.target;
-        setInputData((prevInputData) => ({
-          ...prevInputData,
-          [name]: value,
-          errorMessage: name === 'numberOfPeople' && value === '0' ? "Can't be zero" : '',
+        function handleChange(event) {
+            const { name, value } = event.target;
+            setInputData((prevInputData) => ({
+            ...prevInputData,
+            [name]: value,
+            errorMessage: name === 'numberOfPeople' && value === '0' ? "Can't be zero" : '',
         }))
     }
 
 
     const handleCustomTipClick = () => {
-        setActiveButton("");
+        setActiveButton("")
     }
 
     const customStyle = {
@@ -83,7 +83,7 @@ export default function App() {
           return {
             tipAmount: "0.00",
             totalAmount: "0.00",
-          };
+          }
         }
       
         const tipAmount = (billAmount * tipPercentage) / 100;
@@ -95,8 +95,8 @@ export default function App() {
         return {
           tipAmount: tipPerPerson.toFixed(2),
           totalAmount: totalPerPerson.toFixed(2),
-        };
-    };
+        }
+    }
 
     const { tipAmount, totalAmount } = calculateTipAmount()
 
